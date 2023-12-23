@@ -4,7 +4,7 @@ export type ValiFormError = {
   [name: string]: string;
 };
 
-export const valiErrorForms = (err: ValiError) => {
+export const valiFormErrors = (err: ValiError) => {
   const issues = err.issues;
   let errors = {} as ValiFormError;
 

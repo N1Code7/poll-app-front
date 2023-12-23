@@ -1,5 +1,5 @@
 import { capitalize } from "@/utils/capitalize";
-import { custom, email, forward, minLength, object, required, string, transform } from "valibot";
+import { custom, email, forward, minLength, object, string, transform } from "valibot";
 
 export const SignUpSchema = transform(
   object(
@@ -18,6 +18,14 @@ export const SignUpSchema = transform(
         ),
 
         ["confirmPassword"]
+      ),
+      forward(
+        custom(
+          (input) =>
+            /^[a-z0-9\-\.\_]+@[a-z0-9-]+\.[a-z0-9]{2,5}(\.[a-z0-9]{2,5}){0,1}$/.test(input.email),
+          "L'email saisi n'est pas conforme !"
+        ),
+        ["email"]
       ),
     ]
   ),
