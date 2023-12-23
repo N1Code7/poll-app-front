@@ -12,12 +12,21 @@ type Props = {
 
 const Input = ({ id, label, type = "text", req = true, err }: Props) => {
   return (
-    <Squircle as={"div"} cornerRadius={12} className="input-wrapper">
-      {err && <p>{err}</p>}
-      <input type={type} id={id} name={id} placeholder="" required={req} />
-      <label htmlFor={id}>{label}</label>
-      <span style={{ display: `${req ? "none" : "block"}` }}>Optionnel</span>
-    </Squircle>
+    <div className="input-with-error">
+      {err && <p className="input-error">{err}</p>}
+      <Squircle as={"div"} cornerRadius={12} className="input-wrapper">
+        <input
+          type={type}
+          id={id}
+          name={id}
+          className={err ? "error" : undefined}
+          placeholder=""
+          required={req}
+        />
+        <label htmlFor={id}>{label}</label>
+        <span style={{ display: `${req ? "none" : "block"}` }}>Optionnel</span>
+      </Squircle>
+    </div>
   );
 };
 
