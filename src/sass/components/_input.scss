@@ -1,0 +1,72 @@
+.input-wrapper {
+  position: relative;
+  height: 3.5rem;
+  cursor: pointer;
+
+  &:hover > input {
+    background-color: $accent2;
+  }
+
+  &:focus-within {
+    label {
+      top: 5px;
+      left: 12px;
+      transform: none;
+      font-family: $fontMed;
+      font-size: 10px;
+      color: $dark;
+    }
+
+    input {
+      padding: 1.5rem 0.75rem 0.5rem;
+      background-color: $accent2;
+      font-size: 1rem;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    color: $grey;
+    font-family: $fontLight;
+    font-style: 1rem;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0 0.5rem 0 12px;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    font-family: $fontLight;
+    font-size: 1rem;
+    color: $dark;
+
+    &:not(:placeholder-shown) {
+      padding: 1.5rem 0.75rem 0.5rem;
+      font-size: 1rem;
+
+      & + label {
+        top: 5px;
+        left: 12px;
+        transform: none;
+        font-family: $fontMed;
+        font-size: 10px;
+        color: $dark;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.75rem;
+    font-family: $fontMed;
+    font-size: 0.5rem;
+    color: $grey;
+  }
+}

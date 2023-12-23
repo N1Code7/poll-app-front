@@ -1,0 +1,18 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 1rem;
+  font-family: $fontLight;
+}
+
+h1 {
+  font-family: $fontBold;
+  font-size: 3rem;
+}

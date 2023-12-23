@@ -1,0 +1,23 @@
+main.login {
+  width: clamp(18rem, 66%, 54rem);
+  margin: 6rem auto 0;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+
+  & > div {
+    padding: 2.5rem;
+    background-color: $bg1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  a {
+    align-self: flex-end;
+  }
+}

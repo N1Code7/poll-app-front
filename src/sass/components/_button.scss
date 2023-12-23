@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  color: $light;
+  font-family: $fontMed;
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $accent;
+    color: $light;
+  }
+
+  &-form {
+    width: 100%;
+    background-color: $accent;
+    color: $light;
+  }
+
+  &-form2 {
+    width: 100%;
+    background-color: $grey;
+    color: $light;
+  }
+}
