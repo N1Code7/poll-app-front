@@ -4,7 +4,7 @@ import LoginForm from "./loginForm";
 const Login = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <main className="login">
         <h1>Se connecter</h1>
